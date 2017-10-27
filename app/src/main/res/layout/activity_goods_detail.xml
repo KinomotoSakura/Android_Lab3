@@ -19,6 +19,7 @@
 
         <ImageView
             android:id="@+id/pic"
+            android:src="@mipmap/kindle"
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             android:layout_centerHorizontal="true" />
@@ -33,15 +34,18 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:src="@mipmap/back"/>
+
         <ImageButton
             android:id="@+id/star"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:src="@mipmap/empty_star"
-            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"/>
+            android:background="#00ffffff"
+            android:src="@mipmap/empty_star" />
+
         <TextView
             android:id="@+id/nam"
             android:layout_width="wrap_content"
@@ -59,7 +63,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.6">
+        android:layout_weight="0.7">
 
         <TextView
             android:id="@+id/price"
@@ -69,7 +73,7 @@
             android:layout_alignParentTop="true"
             android:text="price"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="12dp"
             android:textSize="20sp"
             android:textColor="#D5000000"/>
 
@@ -80,9 +84,9 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
             android:text="more"
-            android:layout_marginBottom="6dp"
-            android:layout_marginStart="15dp"
-            android:textSize="15sp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="12dp"
+            android:textSize="18sp"
             android:textColor="#8A000000"/>
 
         <ImageView
@@ -101,7 +105,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="10dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="22dp"
             android:background="@drawable/second"
             android:scaleType="fitXY"
             android:src="@mipmap/shoplist" />
@@ -124,17 +128,17 @@
         <Button
             android:id="@+id/textView2"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:gravity="center|start"
             android:paddingStart="12dp"
             android:text="@string/more"
             android:background="#ffffff"
             android:textColor="#000000"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="25dp"
+            android:layout_height="match_parent"
             android:background="#1E000000"/>
     </LinearLayout>
 
@@ -142,7 +146,7 @@
         android:id="@+id/function"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="2.5">
+        android:layout_weight="2.4">
     </ListView>
 
 </LinearLayout>

@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("Name", goods_list.get(position).getName());
                 intent.putExtra("Price", goods_list.get(position).getprice());
                 intent.putExtra("Info", goods_list.get(position).getInfo());
-                startActivityForResult(intent,0);
+                startActivityForResult(intent, 0);
             }
             @Override
             public void onLongClick(int position) {
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("Name", cart_goods.get(i).getName());
                 intent.putExtra("Price", cart_goods.get(i).getprice());
                 intent.putExtra("Info", cart_goods.get(i).getInfo());
-                startActivityForResult(intent,0);
+                startActivityForResult(intent, 0);
             }
         });
         mListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener(){
@@ -124,13 +124,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
-        if(requestCode==0&&resultCode==0){
+        super.onActivityResult(requestCode, resultCode, intent);
+        if(requestCode==0 && resultCode==0){
             Bundle bud=intent.getExtras();
             String str=bud.getString("na");
             String pri=bud.getString("Pri");
             String info=bud.getString("info");
             int cnt=bud.getInt("cnt",0);
-            for(int i=0;i<cnt;i++){
+            for(int i=0; i<cnt; i++){
                 cart_goods.add(new GoodsInfo(str,info,pri));
             }
             cartAdapter.notifyDataSetChanged();

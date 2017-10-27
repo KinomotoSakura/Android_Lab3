@@ -10,7 +10,7 @@
         android:id="@+id/shop_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="0dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="0dp"
@@ -25,26 +25,25 @@
 
     <LinearLayout
         android:id="@+id/shop_cart"
-        android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:visibility="invisible">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="75sp">
 
             <TextView
                 android:id="@+id/r"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="0dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/first_background"
                 android:gravity="center"
                 android:text="@string/asterisk"
@@ -57,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/r"
                 android:layout_alignBottom="@+id/r"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="23dp"
                 android:layout_toEndOf="@+id/r"
                 android:text="@string/cart"
                 android:textColor="#000000"
@@ -69,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/c"
                 android:layout_alignBottom="@+id/c"
-                android:layout_marginStart="123dp"
+                android:layout_marginStart="150dp"
                 android:layout_toEndOf="@+id/c"
                 android:text="@string/price"
                 android:textColor="#000000"
