@@ -2,10 +2,7 @@ package com.example.lixiang.lab3;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -34,7 +31,7 @@ public class GoodsDetail extends AppCompatActivity {
         ArrayList ss = new ArrayList<String>();
         for(int i=0; i<s.length; i++) ss.add(s[i]);
         ListView llv = (ListView)findViewById(R.id.function);
-        fundescrib fun = new fundescrib(GoodsDetail.this, ss);
+        MoreInfAdapter fun = new MoreInfAdapter(GoodsDetail.this, ss);
         llv.setAdapter(fun);
 
         ImageView img = (ImageView)findViewById(R.id.pic);

@@ -9,12 +9,12 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class fundescrib extends BaseAdapter {
+public class MoreInfAdapter extends BaseAdapter {
 
     private Context context;
     List<String> mDatas;
 
-    public fundescrib(Context context, List<String> mDatas) {
+    public MoreInfAdapter(Context context, List<String> mDatas) {
         this.context = context;
         this.mDatas = mDatas;
     }
