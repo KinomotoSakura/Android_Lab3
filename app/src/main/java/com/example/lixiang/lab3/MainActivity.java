@@ -34,9 +34,42 @@ public class MainActivity extends AppCompatActivity {
         final LinearLayout ll = (LinearLayout) findViewById(R.id.shop_cart);
         ll.setVisibility(View.INVISIBLE);
 
-        final String[] Name = new String[]{"Enchated Forest", "Arla Milk", "Devondale Milk", "Kindle Oasis", "waitrose 早餐麦片", "Mcvitie's 饼干", "Ferrero Rocher", "Maltesers", "Lindt", "Borggreve"};
-        final String[] Price = new String[]{"¥ 5.00", "¥ 59.00", "¥ 79.00", "¥ 2399.00", "¥ 179.00", "¥ 14.00", "¥ 132.59", "¥ 141.43", "¥ 139.43", "¥ 28.90"};
-        final String[] Info = new String[]{"作者  Johanna Basford", "产地  德国", "产地  澳大利亚", "版本  8GB", "重量  2Kg", "产地  英国", "重量  300g", "重量  118g", "重量  249g", "重量  640g"};
+        final String[] Name = new String[]{
+                "Enchated Forest",
+                "Arla Milk",
+                "Devondale Milk",
+                "Kindle Oasis",
+                "waitrose 早餐麦片",
+                "Mcvitie's 饼干",
+                "Ferrero Rocher",
+                "Maltesers",
+                "Lindt",
+                "Borggreve"
+        };
+        final String[] Price = new String[]{
+                "¥ 5.00",
+                "¥ 59.00",
+                "¥ 79.00",
+                "¥ 2399.00",
+                "¥ 179.00",
+                "¥ 14.00",
+                "¥ 132.59",
+                "¥ 141.43",
+                "¥ 139.43",
+                "¥ 28.90"
+        };
+        final String[] Info = new String[]{
+                "作者  Johanna Basford",
+                "产地  德国",
+                "产地  澳大利亚",
+                "版本  8GB",
+                "重量  2Kg",
+                "产地  英国",
+                "重量  300g",
+                "重量  118g",
+                "重量  249g",
+                "重量  640g"
+        };
 
         goods_list =new ArrayList<GoodsInfo>();
         cart_goods =new ArrayList<GoodsInfo>();
@@ -102,19 +135,19 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        final ImageButton imb = (ImageButton) findViewById(R.id.switch_button);
-        imb.setTag("0");
-        imb.setOnClickListener(new View.OnClickListener() {
+        final ImageButton switch_btn = (ImageButton) findViewById(R.id.switch_button);
+        switch_btn.setTag("0");
+        switch_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (imb.getTag() == "0") {
-                    imb.setImageResource(R.mipmap.mainpage);
-                    imb.setTag("1");
+                if (switch_btn.getTag() == "0") {
+                    switch_btn.setImageResource(R.mipmap.mainpage);
+                    switch_btn.setTag("1");
                     ll.setVisibility(View.VISIBLE);
                     mRecyclerView.setVisibility(View.INVISIBLE);
                 } else {
-                    imb.setImageResource(R.mipmap.shoplist);
-                    imb.setTag("0");
+                    switch_btn.setImageResource(R.mipmap.shoplist);
+                    switch_btn.setTag("0");
                     ll.setVisibility(View.INVISIBLE);
                     mRecyclerView.setVisibility(View.VISIBLE);
                 }
@@ -131,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
             String pri=bud.getString("Pri");
             String info=bud.getString("info");
             int cnt=bud.getInt("cnt",0);
-            for(int i=0; i<cnt; i++){
+            for(int i = 0; i < cnt; i++){
                 cart_goods.add(new GoodsInfo(str,info,pri));
             }
             cartAdapter.notifyDataSetChanged();
